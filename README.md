@@ -1,5 +1,5 @@
 ### pack spring boot & build image, then push image to docker hub  
-#### Already upload
+* Already upload
 ```
 $ cd springio-api
 $ docker build -t springio-demo .
@@ -19,7 +19,7 @@ $ kubectl get services
 ```
 
 ### apply all service (app & mysql)  
-#### secret type :
+* secret type :
 ![image](https://user-images.githubusercontent.com/22904639/194242722-d1ebeef9-7256-47a9-9075-0e04a23bb015.png)
 
 ```
@@ -33,16 +33,16 @@ $ kubectl apply -f springio-api/k8s-app
 ```
 
 ### check service,pod status  
-#### 可查詢到POD_NAME
+* 可查詢到POD_NAME
 ```
 $ kubectl get svc,pods -n springio
 ```
 
 ### or using kubernetes proxy
-#### -n 指定namespace
+* -n 指定namespace
 ```
 # open browser: http://localhost:8080/swagger-ui.html
-# 開proxy才能用browser連到網頁
+* 開proxy才能用browser連到網頁
 $ kubectl port-forward -n springio svc/springio-demo 8080:8080
 ```
 
@@ -61,13 +61,13 @@ $ kubectl logs ${POD_NAME} -n springio
 ```
 
 ### look inside mysql  
-#### 進入mysql container 密碼反編譯:root
+* 進入mysql container 密碼反編譯:root
 ```
 $ kubectl -n springio exec -it ${MYSQL_POD_NAME} -- mysql -u root -p
 ```
 
 ### if pods stuck in terminating status  
-#### 留做備用指令
+* 備用指令
 ```
 $ kubectl delete pod <PODNAME> --grace-period=0 --force -n springio  
 ```
