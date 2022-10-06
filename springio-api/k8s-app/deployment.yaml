@@ -7,6 +7,7 @@ metadata:
   namespace: springio
 spec:
   replicas: 2
+  # two replications
   selector:
     matchLabels:
       app: springio-demo
@@ -17,8 +18,10 @@ spec:
     spec:
       containers:
       - image: sunyayang/springio-demo:1.0.0
+        # docker hub username / repository
         name: springio-demo
         ports:
             - containerPort: 8080
         imagePullPolicy: Always
+        #Always : Means always pull image if the local cache doesn't exist. Otherwise Kube will use cached image.
         #https://kubernetes.io/docs/concepts/containers/images/#updating-images
