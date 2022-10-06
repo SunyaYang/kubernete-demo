@@ -1,5 +1,5 @@
 ### pack spring boot & build image, then push image to docker hub  
-## 已上傳
+## A
 ```
 $ cd springio-api
 $ docker build -t springio-demo .
@@ -64,7 +64,7 @@ $ kubectl -n springio exec -it ${MYSQL_POD_NAME} -- mysql -u root -p
 ```
 
 ### if pods stuck in terminating status  
-## 留做備份指令
+## 留做備用指令
 ```
 $ kubectl delete pod <PODNAME> --grace-period=0 --force -n springio  
 ```
