@@ -2,6 +2,8 @@
 * macOS Big Sur 11.6.8
 * CPU 1.3GHz Intel Core i5
 * RAM 4 GB 1600 MHz DDR3
+* docker (v20.10.17)
+* kubernetes (v1.25.0)
 
 ### pack spring boot & build image, then push image to docker hub  
 * Already upload
