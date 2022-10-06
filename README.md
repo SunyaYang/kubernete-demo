@@ -1,5 +1,5 @@
 ### pack spring boot & build image, then push image to docker hub  
-## A
+## Already upload
 ```
 $ cd springio-api
 $ docker build -t springio-demo .
