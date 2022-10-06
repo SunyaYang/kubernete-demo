@@ -5,6 +5,7 @@ metadata:
     app: springio-demo
   name: springio-demo
   namespace: springio
+  # mapping namespace
 spec:
   replicas: 2
   # two replications
