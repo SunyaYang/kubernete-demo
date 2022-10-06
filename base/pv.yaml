@@ -7,5 +7,6 @@ spec:
     storage: 10Gi
   accessModes:
     - ReadWriteOnce
+    # Allows multiple pods which on the same node to access the volume. Can be read & write.
   hostPath:         
     path: /tmp
