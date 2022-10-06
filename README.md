@@ -19,6 +19,9 @@ $ kubectl get services
 ```
 
 ### apply all service (app & mysql)  
+#### secret type
+![image](https://user-images.githubusercontent.com/22904639/194242530-f7394e4b-ce30-4896-89fb-bc6a9a5f1941.png)
+
 ```
 $ cd ..
 //建立namespace & PVC
