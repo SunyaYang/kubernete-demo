@@ -58,6 +58,8 @@ $ kubectl port-forward -n springio svc/springio-demo 8080:8080
 ```
 $ kubectl delete namespaces springio
 $ kubectl delete pv mysql-pv --grace-period=0 --force
+//--grace-period=0 : 延遲一定時長才進行刪除, 0表示等待0s, 預設30s
+//--force : 強制刪除
 ```
 
 ========================== debug ===============================
